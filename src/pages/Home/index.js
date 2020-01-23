@@ -7,29 +7,42 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchWord: "what!"
+      searchWord: ""
     };
   }
+  handleChange = e => {
+    const value = e.target.value;
+    this.setState({ searchWord: value });
+  };
   componentDidMount() {
     const { searchWord } = this.state;
     this.props.loadGifs(searchWord);
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.loadGifs(this.state.searchWord);
+  };
+
   render() {
     const { gifs } = this.props;
+    const { searchWord } = this.state;
     return (
       <div className="home">
         <h1 className="text-center home__heading">Gify Gallery</h1>
         <div className="text-center home__sub-heading">
           Search for the best gifs on the internet.
         </div>
-        <div className="home__input-wrapper">
+        <form className="home__input-wrapper" onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Type what to search"
             className="input"
+            value={searchWord}
+            onChange={this.handleChange}
           />
-        </div>
+          <button onClick={this.handleSubmit}>Search</button>
+        </form>
         <GifList gifs={gifs} />
       </div>
     );
