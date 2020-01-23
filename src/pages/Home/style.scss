@@ -1,0 +1,24 @@
+.home {
+  &__heading {
+    font-size: 49px;
+    margin-bottom: 0;
+  }
+  &__sub-heading {
+    margin-bottom: 30px;
+  }
+
+  &__input-wrapper {
+    max-width: 600px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    .input {
+      padding: 12px 28px;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      width: 100%;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.18);
+    }
+  }
+}
