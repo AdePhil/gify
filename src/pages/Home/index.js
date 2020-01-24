@@ -47,10 +47,12 @@ class Home extends React.Component {
     // }
     return (
       <div className="home">
-        <h1 className="text-center home__heading">Gify Gallery</h1>
-        <div className="text-center home__sub-heading">
-          Search for the best gifs on the internet.
-        </div>
+        <header className="home__header">
+          <h1 className="text-center home__heading">Gify Gallery</h1>
+          <div className="text-center home__sub-heading">
+            Search for the best gifs on the internet.
+          </div>
+        </header>
         <div className="container">
           <form className="home__input-wrapper" onSubmit={this.handleSubmit}>
             <input

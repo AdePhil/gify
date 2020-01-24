@@ -1,10 +1,18 @@
 .home {
+  &__header {
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 30px;
+  }
   &__heading {
-    font-size: 49px;
+    font-size: 30px;
+    margin-top: 0;
     margin-bottom: 0;
   }
   &__sub-heading {
-    margin-bottom: 30px;
+    font-size: 12px;
+    padding-bottom: 10px;
   }
 
   &__input-wrapper {
