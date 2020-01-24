@@ -42,9 +42,6 @@ class Home extends React.Component {
     const { gifs, loadingGifs } = this.props;
     const { searchWord } = this.state;
 
-    // if (loadingGifs) {
-    //   return <Loader message={"Fetching gifs in a jiffy"} />;
-    // }
     return (
       <div className="home">
         <header className="home__header">
@@ -82,6 +79,9 @@ class Home extends React.Component {
         >
           <GifList gifs={gifs} />
         </InfiniteScroll>
+        {gifs.length === 0 && !loadingGifs && (
+          <div className="container text-center">No gifs found.</div>
+        )}
       </div>
     );
   }
