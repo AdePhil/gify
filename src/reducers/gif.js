@@ -6,7 +6,7 @@ import {
   LOAD_GIFS_START,
   LOAD_GIF_BY_ID_START
 } from "../actions/gifconstants";
-const initialState = {
+export const initialState = {
   currentGif: {},
   gifs: [],
   loadingGifs: false,
@@ -14,7 +14,6 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case LOAD_GIFS_START:
       return {
