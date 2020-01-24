@@ -55,7 +55,6 @@ export const loadGifById = id => dispatch => {
   fetchGifById(id)
     .then(response => {
       const gif = response.data.data;
-      console.log(gif);
       dispatch(loadGifByIdSuccess({ gif }));
     })
     .catch(() => {});
