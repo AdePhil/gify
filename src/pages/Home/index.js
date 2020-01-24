@@ -61,8 +61,11 @@ class Home extends React.Component {
               className="input"
               value={searchWord}
               onChange={this.handleChange}
+              data-testid="search-input"
             />
-            <button onClick={this.handleSubmit}>Search</button>
+            <button onClick={this.handleSubmit} data-testid="search-button">
+              Search
+            </button>
           </form>
         </div>
 
@@ -71,7 +74,9 @@ class Home extends React.Component {
           next={this.fetchNextGifs}
           hasMore={true}
           loader={
-            loadingGifs ? <Loader message={"Fetching gifs in a jiffy"} /> : null
+            loadingGifs ? (
+              <Loader message={"Fetching gifs in a jiffy..."} />
+            ) : null
           }
           // endMessage={<p class="text-center">~ end of catalogue ~</p>}
         >

@@ -9,8 +9,10 @@ const Gif = ({ gif }) => {
       <div className="gif">
         <img src={url} alt={title} />
         <div className="gif__description">
-          <p>{title || "No description"}</p>
-          <div className="gif__rating">{rating}</div>
+          <p data-testid="gif-title">{title || "No description"}</p>
+          <div className="gif__rating" data-testid="gif-rating">
+            {rating}
+          </div>
         </div>
       </div>
     </Link>
