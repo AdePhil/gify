@@ -5,6 +5,7 @@
   padding: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
   position: relative;
+  cursor: pointer;
   &__description {
     position: absolute;
     background-color: #f9f9f9;
@@ -17,6 +18,24 @@
     color: #333;
     font-weight: bold;
     border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    p {
+      flex: 1;
+    }
+  }
+  &__rating {
+    text-transform: uppercase;
+    background-color: #ea4c89;
+    font-size: 10px;
+    margin-left: 10px;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
   }
   img {
     object-fit: cover;

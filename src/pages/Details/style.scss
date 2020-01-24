@@ -1,0 +1,67 @@
+.gif-details {
+  &__header {
+    min-height: 200px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 500px) {
+      min-height: 100px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #fff;
+      text-transform: capitalize;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+    .close {
+      text-align: center;
+      text-decoration: underline;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      outline: none;
+      margin-top: 20px;
+    }
+  }
+  &__main {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 700px;
+    .image {
+      object-fit: cover;
+      min-height: 400px;
+      @media (max-width: 500px) {
+        height: 100px;
+        min-height: 300px;
+      }
+    }
+  }
+
+  &__description {
+    .group {
+      display: flex;
+      font-weight: bold;
+      align-items: flex-end;
+      p {
+        margin-bottom: 0;
+      }
+      p:first-child {
+        margin-right: 20px;
+      }
+      .badge {
+        background-color: #ea4c89;
+        padding: 5px 30px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

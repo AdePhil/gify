@@ -13,8 +13,21 @@ body {
   max-width: 1250px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.loader {
+  // min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-top: 2px;
+    font-size: 14px;
+  }
 }
