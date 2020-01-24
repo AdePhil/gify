@@ -62,6 +62,9 @@
         color: #fff;
         text-transform: uppercase;
       }
+      &.baseline {
+        align-items: baseline;
+      }
     }
   }
 }

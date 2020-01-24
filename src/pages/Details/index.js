@@ -65,7 +65,7 @@ class Details extends React.Component {
               <p>source</p>
               {source_tld ? <a href={source}>{source_tld}</a> : "N/A"}
             </div>
-            <div className="group">
+            <div className="group baseline">
               <p>Rating</p>
               <div className="badge">{rating}</div>
             </div>
